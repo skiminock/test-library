@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": ["../src/index.ts"],
-  "sourcesContent": ["export const add = (a: number, b: number): number => a + b;"],
-  "mappings": "AAAO,IAAMA,EAAM,CAACC,EAAWC,IAAsBD,EAAIC",
-  "names": ["add", "a", "b"]
+  "sources": ["../src/components/component-a.tsx", "../src/index.ts"],
+  "sourcesContent": ["export const Component = () => true", "export const add = (a: number, b: number): number => a + b;\n\nexport * from './components'"],
+  "mappings": "AAAO,IAAMA,EAAY,IAAM,GCAxB,IAAMC,EAAM,CAACC,EAAWC,IAAsBD,EAAIC",
+  "names": ["Component", "add", "a", "b"]
 }

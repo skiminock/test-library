@@ -7,6 +7,10 @@
       "noImplicitAny": false,
       "esModuleInterop": true,
       "moduleResolution": "node",
-      "outDir": "lib"
+      "outDir": "lib",                                   
+      "skipLibCheck": true,      
+      "module": "commonjs",                       
+      "rootDir": "src", 
+      "jsx": "react",
     }
   }
