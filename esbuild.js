@@ -34,10 +34,12 @@ parseEntryPoints('src')
 
 console.log('entryPoints', entryPoints)
 
+const filteredEntryPoints = ['src/index.ts', 'src/components/index.ts']
+
 // esm output bundles with code splitting
 esbuild
   .build({
-    entryPoints,
+    entryPoints: filteredEntryPoints,
     external: Object.keys(dependencies),
     outdir: "dist/esm",
     bundle: true,

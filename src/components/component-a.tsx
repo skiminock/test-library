@@ -1,1 +1,1 @@
-export const Component = () => true
+export const ComponentA = () => true

@@ -1,3 +1,5 @@
 export * from './component-a'
+export * from './component-b'
+export * from './component-c'
 export * from './components/ololo'
 export * from './components/azaza'
