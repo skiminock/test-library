@@ -2,13 +2,13 @@
   "name": "test-library",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/cjs/index.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/@types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ts-types": "tsc --emitDeclarationOnly --outDir lib",
-    "build": "rimraf lib && node ./esbuild.js && npm run ts-types"
+    "ts-types": "tsc --emitDeclarationOnly --outDir dist/@types",
+    "build": "rimraf dist && node ./esbuild.js && npm run ts-types"
   },
   "author": "",
   "license": "ISC",
