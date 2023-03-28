@@ -9,6 +9,7 @@ const {
 const { join } = require("path");
 
 const dist = join(process.cwd(), "dist");
+const { dependencies } = require("./package.json");
 
 if (!existsSync(dist)) {
   mkdirSync(dist);
@@ -37,6 +38,7 @@ console.log('entryPoints', entryPoints)
 esbuild
   .build({
     entryPoints,
+    external: Object.keys(dependencies),
     outdir: "dist/esm",
     bundle: true,
     sourcemap: true,
@@ -55,6 +57,7 @@ esbuild
 esbuild
   .build({
     entryPoints: ["src/index.ts"],
+    external: Object.keys(dependencies),
     outfile: "dist/cjs/index.cjs.js",
     bundle: true,
     sourcemap: true,
